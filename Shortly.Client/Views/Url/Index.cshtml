@@ -2,12 +2,13 @@
 
 @{
     var currnetDateTime = DateTime.UtcNow;
+
+    var allUrls = ViewData["AllUrls"] as List<string>;
 }
 
-<h4>Example</h4>
-<p>Original Link with First(): @Model.First().OriginalLink</p>
+<h4>@ViewData["ShortenedUrl"]</h4>
 
-@foreach(var link in @Model)
+@foreach(var url in allUrls)
 {
-    <p>Original Link with Loop: @link.OriginalLink</p>
+    <h3>@url</h3>
 }
