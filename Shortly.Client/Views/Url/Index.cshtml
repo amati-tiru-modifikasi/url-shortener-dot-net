@@ -1,8 +1,13 @@
-﻿@model Url;
+﻿@model List<Url>;
 
 @{
     var currnetDateTime = DateTime.UtcNow;
 }
 
 <h4>Example</h4>
-<p>Original Link: @Model.OriginalLink</p>
+<p>Original Link with First(): @Model.First().OriginalLink</p>
+
+@foreach(var link in @Model)
+{
+    <p>Original Link with Loop: @link.OriginalLink</p>
+}

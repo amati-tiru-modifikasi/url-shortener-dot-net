@@ -18,10 +18,10 @@ namespace Shortly.Client.Controllers
                 UserId = 1
             };
 
-            //var allData = new List<Url>();
-            //allData.Add(urlDb);
+            var allData = new List<Url>();
+            allData.Add(urlDb);
              
-            return View(urlDb);
+            return View(allData);
         }
     }
 }
