@@ -1,12 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Url;
 
 @{
     var currnetDateTime = DateTime.UtcNow;
 }
 
-<h4>Welcome to URL App</h4>
-<p>@currnetDateTime</p>
+<h4>Example</h4>
+<p>Original Link: @Model.OriginalLink</p>
