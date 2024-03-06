@@ -2,13 +2,12 @@
 
 @{
     var currnetDateTime = DateTime.UtcNow;
-
-    var allUrls = ViewData["AllUrls"] as List<string>;
 }
 
-<h4>@ViewData["ShortenedUrl"]</h4>
+<!-- DYNAMIC PROPERTY -->
+<h4>@ViewBag.ShortenedUrl</h4>
 
-@foreach(var url in allUrls)
+@foreach(var url in @ViewBag.allUrls)
 {
     <h3>@url</h3>
-}
+} 
