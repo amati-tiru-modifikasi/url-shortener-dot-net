@@ -4,10 +4,7 @@
     var currnetDateTime = DateTime.UtcNow;
 }
 
-<!-- DYNAMIC PROPERTY -->
-<h4>@ViewBag.ShortenedUrl</h4>
-
-@foreach(var url in @ViewBag.allUrls)
+@if (TempData["SuccessMessage"] != null)
 {
-    <h3>@url</h3>
-} 
+    <h3>Success @TempData["SuccessMessage"].ToString()</h3>
+}

@@ -7,9 +7,27 @@ namespace Shortly.Client.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.ShortenedUrl = "This is just a short url";
-            ViewBag.AllUrls = new List<string>() { "url 1", "url 2", "url 3", "url 4"};
+            var tempData = TempData["SuccessMessage"];
+            var viewBag = ViewBag.Test1;
+            var viewData = ViewData["Test2"];
+
+            if (TempData["SuccessMessage"] != null)
+            {
+                ViewBag.SuccessMessage = TempData["SuccessMessage"].ToString();
+            }
             return View();
+        }
+
+        public IActionResult Create()
+        {
+            // Shorten URL
+            var ShortenedUrl = "short";
+
+            TempData["SuccessMessage"] = "Successfull!";
+            ViewBag.Test1 = "test1";
+            ViewData["Test2"] = "test2";
+
+            return RedirectToAction("Index");
         }
     }
 }
