@@ -9,7 +9,6 @@ namespace Shortly.Client.Controllers
         {
             ViewBag.ShortenedUrl = "This is just a short url";
             ViewBag.AllUrls = new List<string>() { "url 1", "url 2", "url 3", "url 4"};
-             
             return View();
         }
     }
